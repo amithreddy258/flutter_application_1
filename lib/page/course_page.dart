@@ -63,123 +63,118 @@ class CoursePage extends StatelessWidget {
                               )),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 10.0),
-                        child: Container(
-                          height: 30,
-                          alignment: Alignment.center,
-                          child: Text(
-                            corses[1],
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                      InkWell(
+                        onTap: () => movetoquizpage(context),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20.0, vertical: 10.0),
+                          child: Container(
+                            height: 30,
+                            alignment: Alignment.center,
+                            child: Text(
+                              corses[1],
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 10.0),
-                        child: Container(
-                          height: 30,
-                          width: double.infinity,
-                          alignment: Alignment.center,
-                          child: Text(
-                            corses[2],
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                      InkWell(
+                        onTap: () => movetoquizpage(context),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20.0, vertical: 10.0),
+                          child: Container(
+                            height: 30,
+                            width: double.infinity,
+                            alignment: Alignment.center,
+                            child: Text(
+                              corses[2],
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 10.0),
-                        child: Container(
-                          height: 30,
-                          width: double.infinity,
-                          alignment: Alignment.center,
-                          child: Text(
-                            corses[3],
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                      InkWell(
+                        onTap: () => movetoquizpage(context),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20.0, vertical: 10.0),
+                          child: Container(
+                            height: 30,
+                            width: double.infinity,
+                            alignment: Alignment.center,
+                            child: Text(
+                              corses[3],
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 10.0),
-                        child: Container(
-                          height: 30,
-                          width: double.infinity,
-                          alignment: Alignment.center,
-                          child: Text(
-                            corses[4],
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                      InkWell(
+                        onTap: () => movetoquizpage(context),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20.0, vertical: 10.0),
+                          child: Container(
+                            height: 30,
+                            width: double.infinity,
+                            alignment: Alignment.center,
+                            child: Text(
+                              corses[4],
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 10.0),
-                        child: Container(
-                          height: 30,
-                          width: double.infinity,
-                          alignment: Alignment.center,
-                          child: Text(
-                            corses[5],
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                      InkWell(
+                        onTap: () => movetoquizpage(context),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20.0, vertical: 10.0),
+                          child: Container(
+                            height: 30,
+                            width: double.infinity,
+                            alignment: Alignment.center,
+                            child: Text(
+                              corses[5],
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20.0, vertical: 10.0),
-                        child: Container(
-                          height: 30,
-                          width: double.infinity,
-                          alignment: Alignment.center,
-                          child: Text(
-                            corses[5],
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
                             ),
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),

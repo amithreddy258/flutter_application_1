@@ -86,12 +86,12 @@ class HomePagestate extends State<HomePage> {
           title: Container(
             alignment: Alignment.center,
             child: const Text(
-              'Hi Aman Vignesh',
-              style: TextStyle(color: Colors.black),
+              'Hi Aman',
+              style: TextStyle(color: Colors.white),
             ),
             width: double.infinity,
           ),
-          backgroundColor: Color.fromARGB(255, 214, 210, 210),
+          backgroundColor: Colors.deepPurple,
           elevation: 1.0,
         ),
         body: SingleChildScrollView(
@@ -128,7 +128,7 @@ class HomePagestate extends State<HomePage> {
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
+                  color: Colors.deepPurple,
                 ),
                 child: Row(
                   children: [
@@ -144,7 +144,10 @@ class HomePagestate extends State<HomePage> {
                           child: Text(
                             'Model Papers',
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
                           ),
                           // decoration: BoxDecoration(
                           //     color: Colors.white,
@@ -173,9 +176,10 @@ class HomePagestate extends State<HomePage> {
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 width: double.infinity,
+                height: 180,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
+                  color: Colors.deepPurple,
                 ),
                 child: Row(
                   children: [
@@ -202,7 +206,10 @@ class HomePagestate extends State<HomePage> {
                           child: Text(
                             'Previous Year Question papers',
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
                           ),
                           // decoration: BoxDecoration(
                           //     color: Colors.white,
@@ -255,7 +262,7 @@ class HomePagestate extends State<HomePage> {
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color: Colors.white),
+                    color: Colors.deepPurple),
                 child: Row(
                   children: [
                     InkWell(
@@ -267,7 +274,13 @@ class HomePagestate extends State<HomePage> {
                           alignment: Alignment.center,
                           height: 65,
                           width: 140,
-                          child: Text('Notes'),
+                          child: Text(
+                            'Notes',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18),
+                          ),
                           // decoration: BoxDecoration(
                           //     borderRadius: BorderRadius.circular(20),
                           //     color: Colors.white,
@@ -296,7 +309,7 @@ class HomePagestate extends State<HomePage> {
             ],
           ),
         ),
-        backgroundColor: Colors.white60,
+        backgroundColor: Colors.white,
         drawer: Mydrawer());
   }
 }

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/data.dart/PYQ_data.dart';
+import 'package:flutter_application_1/data.dart/modelpapersdata.dart';
+import 'package:flutter_application_1/data.dart/notesdata.dart';
 import 'package:flutter_application_1/page/course_page.dart';
 import 'package:flutter_application_1/page/login_page.dart';
 import 'package:flutter_application_1/quiz/quiz_page.dart';
@@ -23,6 +26,9 @@ class MyApp extends StatelessWidget {
         '/homepage': (context) => HomePage(),
         '/coursepage': (context) => CoursePage(),
         '/quizpage': (context) => QuizPage(),
+        '/pyqdata': (context) => PYQData(),
+        '/modelpapersdata': (context) => ModelPapersData(),
+        '/notesdata': (context) => Notesdata(),
       },
     );
   }

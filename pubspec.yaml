@@ -72,6 +72,7 @@ flutter:
     - assets/images/model_papers.png
     - assets/images/notes.png
     - assets/images/pyq.png
+    - assets/images/Upload_notes.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -24,12 +24,17 @@ class ProductWidget extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Card(
         child: ListTile(
+          minVerticalPadding: 5.0,
           onTap: () => index == 0
               ? movetopyqdatapage(context)
               : (index == 1
                   ? movetomodelpapersdatapage(context)
                   : (index == 3 ? movetonotesdatapage(context) : null)),
-          leading: Image.asset(item.image),
+          leading: Image.asset(
+            item.image,
+            height: 50,
+            width: 50,
+          ),
           title: Text(item.name),
           subtitle: Text(item.dis),
           trailing: Icon(Icons.arrow_forward_ios_rounded),

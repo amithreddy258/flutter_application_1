@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: Theme.of(context).canvasColor,
       child: SingleChildScrollView(
         child: Form(
           key: formKey,
@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: AnimatedContainer(
                         duration: Duration(seconds: 1),
                         decoration: BoxDecoration(
-                          color: Colors.deepPurple,
+                          color: Theme.of(context).buttonColor,
                           borderRadius:
                               BorderRadius.circular(changebutton ? 50 : 8),
                         ),

@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 
-class Mydrawer extends StatelessWidget {
+class Mydrawer extends StatefulWidget {
+  @override
+  State<Mydrawer> createState() => _MydrawerState();
+}
+
+class _MydrawerState extends State<Mydrawer> {
+  movetogrouppage(BuildContext context) {
+    Navigator.pushNamed(context, '/grouppage');
+  }
+
+  movetoprofilepage(BuildContext context) {
+    Navigator.pushNamed(context, '/profilepage');
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -28,7 +41,7 @@ class Mydrawer extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () => movetoprofilepage(context),
             child: ListTile(
               title: Text('My Account'),
               leading: Icon(
@@ -45,6 +58,14 @@ class Mydrawer extends StatelessWidget {
                 Icons.help,
                 color: Colors.blue,
               ),
+            ),
+          ),
+          ListTile(
+            onTap: () => movetogrouppage(context),
+            title: Text('Groups'),
+            leading: Icon(
+              Icons.groups,
+              color: Colors.blue,
             ),
           ),
           Divider(),

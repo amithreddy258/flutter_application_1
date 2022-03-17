@@ -36,7 +36,7 @@ class ModelPapersData extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 decoration: BoxDecoration(
-                    color: Colors.blue,
+                    color: Theme.of(context).buttonColor,
                     borderRadius: BorderRadius.circular(10)),
               )),
         ],

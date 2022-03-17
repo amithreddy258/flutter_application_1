@@ -116,7 +116,7 @@ class QuizPagestate extends State<QuizPage> {
                         textAlign: TextAlign.center,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.deepPurple,
+                        color: Theme.of(context).buttonColor,
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),

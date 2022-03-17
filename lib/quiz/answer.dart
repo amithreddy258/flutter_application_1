@@ -14,7 +14,7 @@ class Answers extends StatelessWidget {
         onPressed: answer,
         child: Text(answertext),
         style: ElevatedButton.styleFrom(
-          primary: Colors.deepPurple,
+          primary: Theme.of(context).buttonColor,
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
         ),
       ),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data.dart/homepagedata.dart';
+import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/widget/appbar.dart';
 import 'package:flutter_application_1/widget/drawer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_application_1/widget/themes.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../widget/product_widget.dart';
@@ -14,6 +16,8 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePagestate extends State<HomePage> {
+  // var colorindex = 0;
+  bool isSwitch = true;
   int activeIndex = 0;
   final controller = CarouselController();
   Widget buildindicator() => AnimatedSmoothIndicator(
@@ -74,6 +78,16 @@ class HomePagestate extends State<HomePage> {
     Navigator.pushNamed(context, '/coursepage');
   }
 
+  callsetstate(var value) {
+    isSwitch = value;
+    print(isSwitch);
+    setState(() {
+      getvalue(
+        switched: isSwitch,
+      );
+    });
+  }
+
   Widget build(BuildContext context) {
     Widget buildImage(var image, int index) => Container(
           margin: EdgeInsets.symmetric(horizontal: 5),
@@ -85,18 +99,27 @@ class HomePagestate extends State<HomePage> {
         );
 
     return Scaffold(
+        backgroundColor: Theme.of(context).canvasColor,
         appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: Theme.of(context).cardColor),
           title: Container(
             alignment: Alignment.center,
-            child: const Text(
-              'Hi Aman',
-              style: TextStyle(color: Colors.black),
+            child: Row(
+              children: [
+                Text(
+                  'Hi Aman Vignesh',
+                  style: TextStyle(color: Theme.of(context).buttonColor),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                buildswitch()
+              ],
             ),
             width: double.infinity,
           ),
-          backgroundColor: Colors.white,
-          elevation: 1.0,
+          backgroundColor: Theme.of(context).canvasColor,
+          elevation: 0.0,
         ),
         body: SingleChildScrollView(
           physics: ScrollPhysics(),
@@ -363,5 +386,11 @@ class HomePagestate extends State<HomePage> {
         // ),
         // backgroundColor: Colors.white,
         drawer: Mydrawer());
+        
   }
+
+  Widget buildswitch() => Switch.adaptive(
+        value: isSwitch,
+        onChanged: (value) => callsetstate(value),
+      );
 }

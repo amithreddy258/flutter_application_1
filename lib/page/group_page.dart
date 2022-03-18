@@ -5,6 +5,10 @@ import 'package:flutter_application_1/widget/groupselect.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class GroupPage extends StatelessWidget {
+  movetogroupmemdetailspage(BuildContext context) {
+    return Navigator.pushNamed(context, '/groupmemdetails');
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       // floatingActionButton: FloatingActionButton(
@@ -12,7 +16,14 @@ class GroupPage extends StatelessWidget {
       //   backgroundColor: Theme.of(context).buttonColor,
       //   child: Icon(Icons.add),
       // ),
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          InkWell(
+            onTap: (() {}),
+            child: Icon(Icons.double_arrow_outlined),
+          )
+        ],
+      ),
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Column(

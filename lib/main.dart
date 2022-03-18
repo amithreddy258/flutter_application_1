@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data.dart/PYQ_data.dart';
 import 'package:flutter_application_1/data.dart/groupdetail.dart';
+import 'package:flutter_application_1/data.dart/groupmembersdata.dart';
 import 'package:flutter_application_1/data.dart/modelpapersdata.dart';
 import 'package:flutter_application_1/data.dart/notesdata.dart';
 import 'package:flutter_application_1/page/course_page.dart';
@@ -34,8 +35,9 @@ class MyApp extends StatelessWidget {
         '/modelpapersdata': (context) => ModelPapersData(),
         '/notesdata': (context) => Notesdata(),
         '/grouppage': (context) => GroupPage(),
-        '/groupdetails': (context) => GroupDetails(),
+        '/groupmemdetails': (context) => GroupMemDetails(),
         '/profilepage': (context) => MyProfile(),
+        '/groupdetails':(context) => GroupDetails(),
       },
     );
   }

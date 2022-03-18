@@ -99,294 +99,68 @@ class HomePagestate extends State<HomePage> {
         );
 
     return Scaffold(
-        backgroundColor: Theme.of(context).canvasColor,
-        appBar: AppBar(
-          iconTheme: IconThemeData(color: Theme.of(context).cardColor),
-          title: Container(
-            alignment: Alignment.center,
-            child: Row(
-              children: [
-                Text(
-                  'Hi Aman Vignesh',
-                  style: TextStyle(color: Theme.of(context).buttonColor),
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-                buildswitch()
-              ],
-            ),
-            width: double.infinity,
-          ),
-          backgroundColor: Theme.of(context).canvasColor,
-          elevation: 0.0,
-        ),
-        body: SingleChildScrollView(
-          physics: ScrollPhysics(),
-          child: Column(children: <Widget>[
-            InkWell(
-              onTap: () => movetocoursepage(context),
-              child: CarouselSlider.builder(
-                carouselController: controller,
-                options: CarouselOptions(
-                    initialPage: 0,
-                    height: 200,
-                    autoPlay: true,
-                    autoPlayInterval: Duration(seconds: 3),
-                    enlargeCenterPage: true,
-                    onPageChanged: (index, reason) => {
-                          setState(
-                            () => activeIndex = index,
-                          )
-                        }),
-                itemCount: imageassets.length,
-                itemBuilder: (context, index, realindex) {
-                  final image = imageassets[index];
-                  return buildImage(image, index);
-                },
+      backgroundColor: Theme.of(context).canvasColor,
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Theme.of(context).cardColor),
+        title: Container(
+          alignment: Alignment.center,
+          child: Row(
+            children: [
+              Text(
+                'Hi Aman Vignesh',
+                style: TextStyle(color: Theme.of(context).buttonColor),
               ),
-            ),
-            ListView.builder(
-              physics: NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemBuilder: (context, index) {
-                return ProductWidget(
-                  item: choices.product[index],
-                  index: index,
-                );
-              },
-              itemCount: choices.product.length,
-            ),
-          ]),
+              SizedBox(
+                width: 30,
+              ),
+              buildswitch()
+            ],
+          ),
+          width: double.infinity,
         ),
-
-        // body:ListView.builder(
-        //   itemBuilder: (context, index) {
-        //     return ProductWidget(
-        //       item: choices.product[index],
-        //       index: index,
-        //     );
-        //   },
-        //   itemCount: choices.product.length,
-        // ),
-        // body: SingleChildScrollView(
-        //   child: Column(
-        //     children: [
-        //       InkWell(
-        //         onTap: () => movetocoursepage(context),
-        //         child: CarouselSlider.builder(
-        //           carouselController: controller,
-        //           options: CarouselOptions(
-        //               initialPage: 0,
-        //               height: 200,
-        //               autoPlay: true,
-        //               autoPlayInterval: Duration(seconds: 3),
-        //               enlargeCenterPage: true,
-        //               onPageChanged: (index, reason) => {
-        //                     setState(
-        //                       () => activeIndex = index,
-        //                     )
-        //                   }),
-        //           itemCount: imageassets.length,
-        //           itemBuilder: (context, index, realindex) {
-        //             final image = imageassets[index];
-        //             return buildImage(image, index);
-        //           },
-        //         ),
-        //       ),
-        //       SizedBox(height: 10),
-        //       buildindicator(),
-        //       SizedBox(height: 15),
-        //       // buildButtons(),
-        //       Container(
-        //         width: double.infinity,
-        //         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-        //         decoration: BoxDecoration(
-        //           borderRadius: BorderRadius.circular(15),
-        //           color: Colors.deepPurple,
-        //         ),
-        //         child: Row(
-        //           children: [
-        //             Padding(
-        //               padding: const EdgeInsets.symmetric(
-        //                   vertical: 50.0, horizontal: 30.0),
-        //               child: InkWell(
-        //                 onTap: () => movetocoursepage(context),
-        //                 child: Container(
-        //                   height: 65,
-        //                   width: 140,
-        //                   alignment: Alignment.center,
-        //                   child: Text(
-        //                     'Model Papers',
-        //                     textAlign: TextAlign.center,
-        //                     style: TextStyle(
-        //                         fontSize: 18,
-        //                         color: Colors.white,
-        //                         fontWeight: FontWeight.bold),
-        //                   ),
-        //                   // decoration: BoxDecoration(
-        //                   //     color: Colors.white,
-        //                   //     borderRadius: BorderRadius.circular(20),
-        //                   //     boxShadow: [
-        //                   //       BoxShadow(
-        //                   //           color: Colors.black,
-        //                   //           blurRadius: 2.0,
-        //                   //           offset: Offset(2.0, 2.0))
-        //                   //     ]),
-        //                 ),
-        //               ),
-        //             ),
-        //             // SizedBox(
-        //             //   width: 20,
-        //             // ),
-        //             SizedBox(
-        //               width: 150,
-        //               height: 100,
-        //               child: Image.asset('assets/images/model_papers.png',
-        //                   fit: BoxFit.contain),
-        //             ),
-        //           ],
-        //         ),
-        //       ),
-        //       Container(
-        //         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-        //         width: double.infinity,
-        //         height: 180,
-        //         decoration: BoxDecoration(
-        //           borderRadius: BorderRadius.circular(15),
-        //           color: Colors.deepPurple,
-        //         ),
-        //         child: Row(
-        //           children: [
-        //             Padding(
-        //               padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        //               child: SizedBox(
-        //                 width: 100,
-        //                 height: 100,
-        //                 child: Image.asset(
-        //                   'assets/images/pyq.png',
-        //                   fit: BoxFit.contain,
-        //                 ),
-        //               ),
-        //             ),
-        //             InkWell(
-        //               onTap: () => movetocoursepage(context),
-        //               child: Padding(
-        //                 padding: const EdgeInsets.symmetric(
-        //                     vertical: 50.0, horizontal: 30.0),
-        //                 child: Container(
-        //                   alignment: Alignment.center,
-        //                   height: 100,
-        //                   width: 140,
-        //                   child: Text(
-        //                     'Previous Year Question papers',
-        //                     textAlign: TextAlign.center,
-        //                     style: TextStyle(
-        //                         fontSize: 18,
-        //                         color: Colors.white,
-        //                         fontWeight: FontWeight.bold),
-        //                   ),
-        //                   // decoration: BoxDecoration(
-        //                   //     color: Colors.white,
-        //                   //     borderRadius: BorderRadius.circular(20),
-        //                   //     boxShadow: [
-        //                   //       BoxShadow(
-        //                   //         color: Colors.black,
-        //                   //         blurRadius: 2.0,
-        //                   //         offset: Offset(1.0, 2.0),
-        //                   //       )
-        //                   //     ]),
-        //                   // alignment: Alignment.center,
-        //                 ),
-        //               ),
-        //             )
-        //           ],
-        //         ),
-        //       ),
-        //       SizedBox(
-        //         height: 10,
-        //       ),
-        //       Container(
-        //         alignment: Alignment.center,
-        //         height: 40,
-        //         width: 350,
-        //         child: Text(
-        //           'Upload your notes +',
-        //           style: TextStyle(
-        //             fontWeight: FontWeight.bold,
-        //             fontSize: 18,
-        //           ),
-        //         ),
-        //         decoration: BoxDecoration(
-        //           color: Colors.white,
-        //           borderRadius: BorderRadius.circular(15),
-        //           boxShadow: [
-        //             BoxShadow(
-        //               color: Colors.black,
-        //               blurRadius: 4,
-        //               // offset: Offset(2.0, 2.0),
-        //             ),
-        //           ],
-        //         ),
-        //       ),
-        //       SizedBox(
-        //         height: 10,
-        //       ),
-        //       Container(
-        //         width: double.infinity,
-        //         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-        //         decoration: BoxDecoration(
-        //             borderRadius: BorderRadius.circular(15),
-        //             color: Colors.deepPurple),
-        //         child: Row(
-        //           children: [
-        //             InkWell(
-        //               onTap: () => movetocoursepage(context),
-        //               child: Padding(
-        //                 padding: const EdgeInsets.symmetric(
-        //                     vertical: 40, horizontal: 25),
-        //                 child: Container(
-        //                   alignment: Alignment.center,
-        //                   height: 65,
-        //                   width: 140,
-        //                   child: Text(
-        //                     'Notes',
-        //                     style: TextStyle(
-        //                         color: Colors.white,
-        //                         fontWeight: FontWeight.bold,
-        //                         fontSize: 18),
-        //                   ),
-        //                   // decoration: BoxDecoration(
-        //                   //     borderRadius: BorderRadius.circular(20),
-        //                   //     color: Colors.white,
-        //                   //     boxShadow: [
-        //                   //       BoxShadow(
-        //                   //           color: Colors.black,
-        //                   //           blurRadius: 2.0,
-        //                   //           offset: Offset(2.0, 2.0))
-        //                   //     ]),
-        //                 ),
-        //               ),
-        //             ),
-        //             SizedBox(
-        //               width: 20,
-        //             ),
-        //             SizedBox(
-        //               width: 100,
-        //               child: Image.asset(
-        //                 'assets/images/notes.png',
-        //                 fit: BoxFit.contain,
-        //               ),
-        //             )
-        //           ],
-        //         ),
-        //       )
-        //     ],
-        //   ),
-        // ),
-        // backgroundColor: Colors.white,
-        drawer: Mydrawer());
-        
+        backgroundColor: Theme.of(context).canvasColor,
+        elevation: 0.0,
+      ),
+      body: SingleChildScrollView(
+        physics: ScrollPhysics(),
+        child: Column(children: <Widget>[
+          InkWell(
+            onTap: () => movetocoursepage(context),
+            child: CarouselSlider.builder(
+              carouselController: controller,
+              options: CarouselOptions(
+                  initialPage: 0,
+                  height: 200,
+                  autoPlay: true,
+                  autoPlayInterval: Duration(seconds: 3),
+                  enlargeCenterPage: true,
+                  onPageChanged: (index, reason) => {
+                        setState(
+                          () => activeIndex = index,
+                        )
+                      }),
+              itemCount: imageassets.length,
+              itemBuilder: (context, index, realindex) {
+                final image = imageassets[index];
+                return buildImage(image, index);
+              },
+            ),
+          ),
+          ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return ProductWidget(
+                item: choices.product[index],
+                index: index,
+              );
+            },
+            itemCount: choices.product.length,
+          ),
+        ]),
+      ),
+      drawer: Mydrawer(),
+    );
   }
 
   Widget buildswitch() => Switch.adaptive(

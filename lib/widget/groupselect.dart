@@ -3,7 +3,7 @@ import 'package:flutter_application_1/data.dart/groupdata.dart';
 
 class GroupSelect extends StatelessWidget {
   movetogroupdetailspage(BuildContext context) {
-    return Navigator.pushNamed(context, '/groupdetails');
+    return Navigator.pushNamed(context, '/groupdetail');
   }
 
   final groupchoice item;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data.dart/PYQ_data.dart';
+import 'package:flutter_application_1/page/chackbocxist.dart';
 import 'package:flutter_application_1/page/groupdetail.dart';
 import 'package:flutter_application_1/data.dart/groupmembersdata.dart';
 import 'package:flutter_application_1/data.dart/modelpapersdata.dart';
@@ -37,7 +38,8 @@ class MyApp extends StatelessWidget {
         '/grouppage': (context) => GroupPage(),
         '/groupmemdetails': (context) => GroupMemDetails(),
         '/profilepage': (context) => MyProfile(),
-        '/groupdetails':(context) => GroupDetails(),
+        '/groupdetail':(context) => GroupDetails(),
+        '/checkbox': (context) => CheckBoxListTile(),
       },
     );
   }

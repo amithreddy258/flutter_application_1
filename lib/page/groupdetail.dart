@@ -14,28 +14,13 @@ class GroupDetails extends StatelessWidget {
               ),
               margin: EdgeInsets.all(20),
               height: 275,
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                          child: Container(
-                        margin: EdgeInsets.all(20),
-                        height: 95,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.black,
-                        ),
-                        child: Align(
-                          alignment: Alignment(-0.75, -0.5),
-                          child: Text(
-                            'Checklist 1',
-                            style: TextStyle(color: Colors.white, fontSize: 18),
-                          ),
-                        ),
-                      )),
-                      Expanded(
-                        child: Container(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                            child: Container(
                           margin: EdgeInsets.all(20),
                           height: 95,
                           decoration: BoxDecoration(
@@ -50,30 +35,31 @@ class GroupDetails extends StatelessWidget {
                                   TextStyle(color: Colors.white, fontSize: 18),
                             ),
                           ),
-                        ),
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
+                        )),
+                        Expanded(
                           child: Container(
-                        margin: EdgeInsets.all(20),
-                        height: 95,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.black,
-                        ),
-                        child: Align(
-                          alignment: Alignment(-0.75, -0.5),
-                          child: Text(
-                            'Checklist 1',
-                            style: TextStyle(color: Colors.white, fontSize: 18),
+                            margin: EdgeInsets.all(20),
+                            height: 95,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.black,
+                            ),
+                            child: Align(
+                              alignment: Alignment(-0.75, -0.5),
+                              child: Text(
+                                'Checklist 1',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                            ),
                           ),
-                        ),
-                      )),
-                      Expanded(
-                        child: Container(
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                            child: Container(
                           margin: EdgeInsets.all(20),
                           height: 95,
                           decoration: BoxDecoration(
@@ -88,11 +74,68 @@ class GroupDetails extends StatelessWidget {
                                   TextStyle(color: Colors.white, fontSize: 18),
                             ),
                           ),
-                        ),
-                      )
-                    ],
-                  ),
-                ],
+                        )),
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.all(20),
+                            height: 95,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.black,
+                            ),
+                            child: Align(
+                              alignment: Alignment(-0.75, -0.5),
+                              child: Text(
+                                'Checklist 1',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                            child: Container(
+                          margin: EdgeInsets.all(20),
+                          height: 95,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.black,
+                          ),
+                          child: Align(
+                            alignment: Alignment(-0.75, -0.5),
+                            child: Text(
+                              'Checklist 1',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
+                          ),
+                        )),
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.all(20),
+                            height: 95,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.black,
+                            ),
+                            child: Align(
+                              alignment: Alignment(-0.75, -0.5),
+                              child: Text(
+                                'Checklist 1',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(

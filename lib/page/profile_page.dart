@@ -116,21 +116,6 @@ class MyProfile extends StatelessWidget {
               color: Colors.black,
               thickness: 1.0,
             ),
-            // ListTile(
-            //     leading: Text('SE'),
-            //     trailing: CircularPercentIndicator(
-            //       radius: 120.0,
-            //       percent: 0.6,
-            //       progressColor: Colors.green,
-            //     )),
-            // ListView.builder(
-            //   itemBuilder: (context, index) {
-            //     return Courses(
-            //       item: coursechoises.select[index],
-            //     );
-            //   },
-            //   itemCount: coursechoises.select.length,
-            // ),
             Container(
               decoration: BoxDecoration(
                   color: Color.fromARGB(255, 220, 204, 182),

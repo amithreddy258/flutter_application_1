@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data.dart/PYQ_data.dart';
-import 'package:flutter_application_1/data.dart/groupdetail.dart';
+import 'package:flutter_application_1/page/groupdetail.dart';
 import 'package:flutter_application_1/data.dart/groupmembersdata.dart';
 import 'package:flutter_application_1/data.dart/modelpapersdata.dart';
 import 'package:flutter_application_1/data.dart/notesdata.dart';

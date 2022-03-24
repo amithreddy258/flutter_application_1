@@ -347,7 +347,9 @@ class MyProfile extends StatelessWidget {
                     InkWell(
                       onTap: () async {
                         final url = 'https://www.youtube.com/';
-                        launch(url);
+                        if (await canLaunch(url)) {
+                          launch(url);
+                        }
                       },
                       child: Container(
                         child: Icon(Icons.icecream),

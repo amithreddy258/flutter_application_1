@@ -20,7 +20,11 @@ class _LoginPageState extends State<LoginPage> {
       changebutton = false;
     });
   }
+  moveToRegisterPage(BuildContext context) {
+      Navigator.pushNamed(context, '/registerpage');
+    }
 
+  @override
   Widget build(BuildContext context) {
     return Material(
       color: Theme.of(context).canvasColor,
@@ -35,17 +39,17 @@ class _LoginPageState extends State<LoginPage> {
                   fit: BoxFit.contain,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Text(
                 'Welcome $name',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 22,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Padding(
@@ -53,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                   children: [
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: "Enter Username",
                         labelText: 'Username',
                       ),
@@ -71,20 +75,20 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     TextFormField(
                       obscureText: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: "Enter Password",
                         labelText: 'Password',
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20.0,
                     ),
                     InkWell(
                       onTap: () => moveToHomePage(context),
                       child: AnimatedContainer(
-                        duration: Duration(seconds: 1),
+                        duration: const Duration(seconds: 1),
                         decoration: BoxDecoration(
-                          color: Theme.of(context).buttonColor,
+                          color: Theme.of(context).backgroundColor,
                           borderRadius:
                               BorderRadius.circular(changebutton ? 50 : 8),
                         ),
@@ -92,11 +96,11 @@ class _LoginPageState extends State<LoginPage> {
                         height: 50,
                         width: changebutton ? 50 : 150,
                         child: changebutton
-                            ? Icon(
+                            ? const Icon(
                                 Icons.done,
                                 color: Colors.white,
                               )
-                            : Text(
+                            : const Text(
                                 'Login',
                                 style: TextStyle(
                                   color: Colors.white,
@@ -105,6 +109,10 @@ class _LoginPageState extends State<LoginPage> {
                                 ),
                               ),
                       ),
+                    ),
+                    TextButton(
+                      onPressed: () => moveToRegisterPage(context),
+                      child: const Text('Did not register yet? Register now.'),
                     )
                   ],
                 ),
@@ -116,3 +124,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
+// moveToRegisterPage(BuildContext context) {
+//   Navigator.pushNamed(context, '/registerpage');
+// }

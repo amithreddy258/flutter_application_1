@@ -23,6 +23,7 @@ class ProductWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Card(
+        color: Theme.of(context).primaryColor,
         child: ListTile(
           minVerticalPadding: 5.0,
           onTap: () => index == 0
@@ -35,8 +36,14 @@ class ProductWidget extends StatelessWidget {
             height: 50,
             width: 50,
           ),
-          title: Text(item.name),
-          subtitle: Text(item.dis),
+          title: Text(
+            item.name,
+            style: TextStyle(color: Theme.of(context).canvasColor),
+          ),
+          subtitle: Text(
+            item.dis,
+            style: TextStyle(color: Theme.of(context).canvasColor),
+          ),
           trailing: Icon(Icons.arrow_forward_ios_rounded),
         ),
       ),

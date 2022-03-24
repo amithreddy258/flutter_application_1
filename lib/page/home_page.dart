@@ -6,6 +6,7 @@ import 'package:flutter_application_1/widget/drawer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_application_1/widget/themes.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:flutter_application_1/widget/config.dart';
 
 import '../widget/product_widget.dart';
 
@@ -78,16 +79,6 @@ class HomePagestate extends State<HomePage> {
     Navigator.pushNamed(context, '/coursepage');
   }
 
-  callsetstate(var value) {
-    isSwitch = value;
-    print(isSwitch);
-    setState(() {
-      getvalue(
-        switched: isSwitch,
-      );
-    });
-  }
-
   Widget build(BuildContext context) {
     Widget buildImage(var image, int index) => Container(
           margin: EdgeInsets.symmetric(horizontal: 5),
@@ -108,12 +99,17 @@ class HomePagestate extends State<HomePage> {
             children: [
               Text(
                 'Hi Aman Vignesh',
-                style: TextStyle(color: Theme.of(context).buttonColor),
+                style: TextStyle(color: Theme.of(context).primaryColor),
               ),
               SizedBox(
                 width: 30,
               ),
-              buildswitch()
+              IconButton(
+                icon: const Icon(
+                  Icons.brightness_4,
+                ),
+                onPressed: () => currentTheme.toggleTheme(),
+              )
             ],
           ),
           width: double.infinity,
@@ -163,8 +159,8 @@ class HomePagestate extends State<HomePage> {
     );
   }
 
-  Widget buildswitch() => Switch.adaptive(
-        value: isSwitch,
-        onChanged: (value) => callsetstate(value),
-      );
+  // Widget buildswitch() => Switch.adaptive(
+  //       value: isSwitch,
+  //       onChanged: (value) => callsetstate(value),
+  //     );
 }
